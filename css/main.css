@@ -1,0 +1,146 @@
+
+/* Box sizing em border-box para que a largura e altura incluam no calculo o padding e o border */
+html{
+    box-sizing: border-box;
+}
+/* Aqui foi adotado uma pratica para que o box-size herdasse do elemento pai sua configuração */
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+/* Fonte e cores, Aqui crio variaveis de cores para serem utilizadas em todo esse arquivo CSS */
+body{
+    --radius: 0.35rem;
+    --color-background: #bebebe;
+    --color-background2: #ffffff;
+    --color-text: #000000;
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+body.darkmode{
+    --color-background: #212E37;
+    --color-background2: #2b3743 ;
+    --color-text: #ffffff;
+
+}
+/* Margens */
+.margin{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.container, .filter-content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+/* Barra Superior */
+.navbar{
+    background-color: var(--color-background2);
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Botão */
+.btn-darkmode{
+    background-color: var(--color-background2);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.3s;
+    color: var(--color-text)
+}
+.btn-darkmode:hover {
+    opacity: 0.6;
+    
+
+}
+/* Filtros */
+.filter-content {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search{
+    box-shadow:var(--box-shadow) ;
+    border-radius: 0.2rem;
+    background-color: var(--color-background2);
+    padding: 0.5rem;
+
+}
+.search i{
+    opacity: 0.3;
+    
+}
+#input-fomulary{
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+    background-color: var(--color-background2);
+    color: var(--color-text);
+    
+
+}
+
+/* Espaçamento entre os cards */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+}
+/* Cartão */
+.card{
+    background-color: var(--color-background2);
+    border-radius: var(--radius);
+    box-shadow: var(--box-shadow);
+}
+.img-flag{
+    width: 100%;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(----radius);
+}
+.card img {
+    border-top-right-radius:var(--radius);
+    border-top-left-radius: var(--radius);
+}
+.card-content{
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    
+}
+
+/* Responsividade */
+@media (max-width: 1200px){
+    .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}    
+@media (max-width: 900px){
+        .navbar-content{
+            font-size: 0.7rem;
+        }
+        .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        
+}
+
+@media (max-width: 550px){
+    .navbar-content{
+        font-size: 0.7rem;
+    }
+    .grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .filter-content{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+}
