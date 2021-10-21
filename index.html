@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom-select.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -22,14 +23,15 @@
 
         </div>
     </nav>
-    <header class="filter-content margin" >
-        <form class="search" id="formulary">
+    <header class="container filter-content margin" >
+        <form class="search " id="formulary">
             <i class="fas fa-search"></i>
             <input type="text" placeholder="Buscar País " id="input-fomulary">
         </form>       
-        <div>
+        <div class="custom-select" style="width:220px">
             <select>
                 <option value="">Filtrar por Continentes</option>
+                <option value="">Todos</option>
                 <option value="Africa">Africa</option>
                 <option value="Americas">Americas</option>
                 <option value="Asia">Asia</option>
@@ -37,7 +39,8 @@
                 <option value="Oceania">Oceania</option>
             </select>
         </div>
-    </header>
+    </header>   
+    
     <main class="container grid">
        
         <article class="card">
@@ -141,5 +144,6 @@
         </article>
     </main>
     <script src="js/darkmode.js"></script>
+    <script src="js/custom-select.js"></script>
 </body>
 </html>

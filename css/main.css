@@ -24,16 +24,19 @@ body.darkmode{
     --color-text: #ffffff;
 
 }
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
 /* Margens */
 .margin{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
-.container, .filter-content{
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-}
+
 /* Barra Superior */
 .navbar{
     background-color: var(--color-background2);
@@ -70,17 +73,19 @@ body.darkmode{
     box-shadow:var(--box-shadow) ;
     border-radius: 0.2rem;
     background-color: var(--color-background2);
-    padding: 0.5rem;
+    padding: 1rem;
+    
 
 }
 .search i{
     opacity: 0.3;
     
+    
 }
 #input-fomulary{
     border: none;
     outline: none;
-    margin-left: 1rem;
+    margin-left: 2rem;
     background-color: var(--color-background2);
     color: var(--color-text);
     
