@@ -12,6 +12,7 @@ const fetchData = async () => {
         console.log(data);
         flagPrint(data)
         formularyClient(data)
+        filtros(data)
     } catch (error) {
         console.log(error);
     }
@@ -24,9 +25,9 @@ const fetchData = async () => {
             <article class="card">
             <img src="${item.flags.svg}" class="img-flag" alt="flag">
             <div class="card-content margin">
-                <h3>${item.name.common}</h3>
+                <h3>${item.translations.por.common}</h3>
                 <p>
-                    <b> Populaçao:</b>
+                    <b> População:</b>
                     ${item.population}
                 </p>
                 <p> 

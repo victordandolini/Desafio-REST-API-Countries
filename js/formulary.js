@@ -6,5 +6,12 @@ const formularyClient = data => {
         e.preventDefault()
         const inputClient = inputFormulary.value.toLowerCase()
         console.log(inputClient);
+        const arrayFiltrado = data.filter(item => {
+            const input = item.translations.por.common.toLowerCase();
+            if(input.indexOf(inputClient) !== -1){
+                return item
+            }
+        })
+        flagPrint(arrayFiltrado);
     })
 }
