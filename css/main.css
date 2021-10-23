@@ -74,6 +74,7 @@ body.darkmode{
     border-radius: 0.2rem;
     background-color: var(--color-background2);
     padding: 1rem;
+    height: 50px;
     
 
 }
@@ -135,7 +136,7 @@ body.darkmode{
         
 }
 
-@media (max-width: 550px){
+@media (max-width: 658px){
     .navbar-content{
         font-size: 0.7rem;
     }
@@ -146,6 +147,13 @@ body.darkmode{
         flex-direction: column;
         align-items: flex-start;
 
+    }
+    .search{ 
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+    #input-fomulary{
+        width: 85%;
     }
 
 }

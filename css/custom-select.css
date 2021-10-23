@@ -6,12 +6,14 @@
 
 .custom-select select {
   display: none; /*hide original SELECT element: */
+  
 }
 
 .select-selected {
   background-color: var(--color-background2);
   box-shadow:var(--box-shadow) ;
   border-radius: 0.2rem;
+  
 }
 
 /* Style the arrow inside the select element: */
@@ -47,7 +49,7 @@
 .select-items {
   position: absolute;
   background-color: var(--color-background2);
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
   top: 100%;
   left: 0;
   right: 0;
