@@ -1,4 +1,7 @@
-const flags = document.getElementById('flag')
+const flag = document.getElementById ('flag')
+const query = new URLSearchParams(window.location.search)
+const params = query.get('name')
+console.log(params);
 
 document.addEventListener("DOMContentLoaded", e => {
     fetchData()
@@ -7,12 +10,9 @@ document.addEventListener("DOMContentLoaded", e => {
 const fetchData = async () => {
     try {
         const res = await fetch(`https://restcountries.com/v3.1/all`)
-        console.log(res);
         const data = await res.json()
-        console.log(data);
-        flagPrint(data)
-        formularyClient(data)
-        filtros(data)
+        const datafilter = data.filter(item => item.name.common === params)         
+        flagPrint(datafilter)
     } catch (error) {
         console.log(error);
     }
@@ -37,14 +37,10 @@ const fetchData = async () => {
                 <p>
                     <b> Região:</b>
                     ${item.region}
-                </p>
-                <p>
-                    <a href="flagpage.html?name=${item.name.common}">Mais informações</a>
-                </p>
+                </p>                
             </div>
         </article>
         `
         });
-        flags.innerHTML = element
+        flag.innerHTML = element
     }
-    
