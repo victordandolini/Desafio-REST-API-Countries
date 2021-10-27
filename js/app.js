@@ -21,10 +21,9 @@ const fetchData = async () => {
     const flagPrint = data => {
         let element = ''
         data.forEach(item => {
-            element += `
-            <article class="card">
-            <img src="${item.flags.svg}" class="img-flag" alt="flag">
-            <div class="card-content margin">
+            element += `<article class="card">
+            <a href="flagpage.html?name=${item.name.common}"><div class="country-img" style="background-image: url(${item.flags.svg});"></div></a>
+                <div class="card-content margin">
                 <h3>${item.translations.por.common}</h3>
                 <p>
                     <b> População:</b>
@@ -38,10 +37,7 @@ const fetchData = async () => {
                     <b> Região:</b>
                     ${item.region}
                 </p>
-                <p>
-                    <a href="flagpage.html?name=${item.name.common}">Mais informações</a>
-                </p>
-            </div>
+                </div>
         </article>
         `
         });

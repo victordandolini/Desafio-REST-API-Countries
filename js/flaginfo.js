@@ -23,8 +23,8 @@ const fetchData = async () => {
         data.forEach(item => {
             element += `
             <article class="card">
-            <img src="${item.flags.svg}" class="img-flag" alt="flag">
-            <div class="card-content margin">
+            <img src="${item.flags.svg}" class="flagleft" alt="flag">
+            <div>
                 <h3>${item.translations.por.common}</h3>
                 <p>
                     <b> População:</b>

@@ -1,41 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/flaginfo.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title>Rest API Countries</title>
+    <title>Enciclopédia dos Paises</title>
 </head>
 
 <body>
-
+    <!-- Cabeçalho -->
     <nav class="navbar">
         <div class="container navbar-content">
-            <h1>Onde no Mundo?</h1>
+            <h1>Qual pais no mundo?</h1>
             <button class="btn-darkmode">
                 <i class="far fa-moon"></i>
                 Dark Mode
             </button>
         </div>
     </nav>
-
-    <header class="container filter-content margin">
-        <button>
-            <a href="index.html"> Voltar</a>
-        </button>
-    </header>
-
-    <main class="container grid" id="flag">
+   
+    <!-- Botão Retornar -->
+    <header class="container filter-content">
         
-    </main>
-
-    <script src="js/darkmode.js"></script>
-    <script src="js/flaginfo.js"></script>
+    </header>
+   
+    <!-- Bandeira e detalhes -->
+    <div class="countryModal">
+        <button class="back">
+            <a href="index.html"> Retornar</a>
+        </button>
+        <div class="modal">
+            <div class="leftModal">
+                <img src="https://flagcdn.com/w320/br.png" alt="" srcset="">                
+            </div>
+            <div class="rightModal">
+                <h1>Brasil</h1>
+                <div class="modalInfo">
+                    <div class="innerLeft inne">
+                        <p><strong>População:</strong>${data.population}</p>
+                        <p class="regionName"><strong>Região:</strong>${data.region}</p>
+                        <p><strong>Capital:</strong>${data.population}</p>
+                    </div>
+                    <div class="innerRight inne">
+                        <p><strong>Top Level Domain:</strong>${data.population}</p>
+                        <p class="regionName"><strong>Região:</strong>${data.region}</p>
+                        <p><strong>Capital:</strong>${data.population}</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/darkmode.js"></script> <!-- link js para botão dark mode -->
+    <script src="js/flaginfo.js"></script> <!-- link js para buscar detalhes -->
+    <script src="js/app.js"></script>
+    
     
 
 </body>

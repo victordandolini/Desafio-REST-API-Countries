@@ -1,4 +1,10 @@
-
+:root {
+    /* --color-bg: #bebebe;
+    --color-bg-secondary: #ffffff;
+    --color-text: #000000; */
+    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --border-radius: 0.35rem;
+}
 /* Box sizing em border-box para que a largura e altura incluam no calculo o padding e o border */
 html{
     box-sizing: border-box;
@@ -16,7 +22,7 @@ body{
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     font-family: 'Nunito Sans', sans-serif;
     color: var(--color-text);
-    background-color: var(--color-background);
+    background-color: var(--color-background2);
 }
 body.darkmode{
     --color-background: #212E37;
@@ -28,7 +34,7 @@ body.darkmode{
 .container{
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 95%;
 }
 
 /* Margens */
@@ -75,13 +81,20 @@ body.darkmode{
     background-color: var(--color-background2);
     padding: 1rem;
     height: 50px;
+    width: 400px;
+    color: var(--color-text);
+    
     
 
 }
 .search i{
-    opacity: 0.3;
+    
+    color: var(--color-text)
     
     
+}
+input::placeholder {
+    color: var(--color-text);
 }
 #input-fomulary{
     border: none;
@@ -89,36 +102,41 @@ body.darkmode{
     margin-left: 2rem;
     background-color: var(--color-background2);
     color: var(--color-text);
-    
-
 }
 
 /* Espaçamento entre os cards */
 .grid{
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
 }
 /* Cartão */
 .card{
     background-color: var(--color-background2);
     border-radius: var(--radius);
     box-shadow: var(--box-shadow);
-}
-.img-flag{
-    width: 100%;
-    border-bottom-left-radius: var(--radius);
-    border-bottom-right-radius: var(----radius);
-}
-.card img {
-    border-top-right-radius:var(--radius);
-    border-top-left-radius: var(--radius);
-}
-.card-content{
-    margin-bottom: 2rem;
-    margin-left: 1rem;
+    width: 320px;
+    
     
 }
+
+.country-img{
+    min-height: 180px;
+    width: 320px;
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    
+
+}
+
+.card-content{
+    margin-bottom: 2rem;
+    margin-left: 1rem;   
+}
+
 
 /* Responsividade */
 @media (max-width: 1200px){
