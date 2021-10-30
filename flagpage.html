@@ -16,8 +16,8 @@
 <body>
     <!-- Cabeçalho -->
     <nav class="navbar">
-        <div class="container navbar-content">
-            <h1>Qual pais no mundo?</h1>
+        <div class="container navbar-content filter-content">
+            <h1>Paises</h1>
             <button class="btn-darkmode">
                 <i class="far fa-moon"></i>
                 Dark Mode
@@ -25,45 +25,25 @@
         </div>
     </nav>
    
-    <!-- Botão Retornar -->
-    <header class="container filter-content">
-        
+    <!-- Filtros de Buscas -->
+    <header class="container filter-content margin" >
+     <!-- Botão Retornar -->
+    <button class="back fas fa-long-arrow-alt-left"></i>
+        <a href="index.html"> Retornar</a>
+    </button>   
     </header>
-   
+     
     <!-- Bandeira e detalhes -->
     <div class="countryModal">
-        <button class="back">
-            <a href="index.html"> Retornar</a>
-        </button>
-        <div class="modal">
-            <div class="leftModal">
-                <img src="https://flagcdn.com/w320/br.png" alt="" srcset="">                
-            </div>
-            <div class="rightModal">
-                <h1>Brasil</h1>
-                <div class="modalInfo">
-                    <div class="innerLeft inne">
-                        <p><strong>População:</strong>${data.population}</p>
-                        <p class="regionName"><strong>Região:</strong>${data.region}</p>
-                        <p><strong>Capital:</strong>${data.population}</p>
-                    </div>
-                    <div class="innerRight inne">
-                        <p><strong>Top Level Domain:</strong>${data.population}</p>
-                        <p class="regionName"><strong>Região:</strong>${data.region}</p>
-                        <p><strong>Capital:</strong>${data.population}</p>
-                    </div>
-                </div>
-                
-            </div>
+        
+        <div class="modal" id="flag">
         </div>
     </div>
     
     <script src="js/darkmode.js"></script> <!-- link js para botão dark mode -->
-    <script src="js/flaginfo.js"></script> <!-- link js para buscar detalhes -->
-    <script src="js/app.js"></script>
+    <script src="js/flaginfo.js"></script> <!--link js para buscar detalhes -->
     
     
-
-</body>
+    </body>
 
 </html>

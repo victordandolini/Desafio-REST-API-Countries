@@ -1,5 +1,6 @@
 const flags = document.getElementById('flag')
 
+
 document.addEventListener("DOMContentLoaded", e => {
     fetchData()
 })
@@ -13,12 +14,13 @@ const fetchData = async () => {
         flagPrint(data)
         formularyClient(data)
         filtros(data)
+        
     } catch (error) {
         console.log(error);
     }
 }
 
-    const flagPrint = data => {
+const flagPrint = data => {
         let element = ''
         data.forEach(item => {
             element += `<article class="card">
@@ -42,5 +44,5 @@ const fetchData = async () => {
         `
         });
         flags.innerHTML = element
-    }
-    
+        
+}

@@ -3,6 +3,7 @@ const query = new URLSearchParams(window.location.search)
 const params = query.get('name')
 console.log(params);
 
+
 document.addEventListener("DOMContentLoaded", e => {
     fetchData()
 })
@@ -22,24 +23,25 @@ const fetchData = async () => {
         let element = ''
         data.forEach(item => {
             element += `
-            <article class="card">
-            <img src="${item.flags.svg}" class="flagleft" alt="flag">
-            <div>
-                <h3>${item.translations.por.common}</h3>
-                <p>
-                    <b> População:</b>
-                    ${item.population}
-                </p>
-                <p> 
-                    <b> Capital:</b>
-                    ${item.capital}
-                </p>
-                <p>
-                    <b> Região:</b>
-                    ${item.region}
-                </p>                
+             <div class="leftModal">
+                <img src="${item.flags.svg}" alt="" srcset="">                
             </div>
-        </article>
+            <div class="rightModal" id="rightModal">
+                <h1>${item.translations.por.common}</h1>
+                <div class="modalInfo">
+                    <div class="innerLeft inne">
+                        <p><strong>População:</strong>${item.population}</p>
+                        <p><strong>Região:</strong>${item.region}</p>
+                        <p><strong>Sub-Região:</strong>${item.subregion}</p>
+                    </div>
+                    <div class="innerRight inne">
+                        <p><strong>Capital:</strong>${item.capital}</p>
+                        <p><strong>Top Level Domain:</strong>${item.tld}</p>
+                        <p><strong>Moeda:</strong>${item.currencies}</p>
+                        <p><strong>Idioma:</strong>${item.languages}</p>
+                        
+                    </div>
+                </div>
         `
         });
         flag.innerHTML = element

@@ -4,30 +4,41 @@ body{
     --color-background2: #ffffff;
     --color-text: #000000;
     --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    
 }
 .countryModal{
     position: fixed;
-    top: 0;
+    top: 1rem;
     left: 0;
     width: 100%;
     height: 100%;
     background: var(--color-background2);
     padding: 30px;
+    padding-top: 0;
     position: relative;
 
 }
 .back{
     position: absolute;
-    top: 3rem;
+    top: 8rem;
     left: 30px;
     background: var(--color-background2);
-    box-shadow: var(--box-shadow);
-    padding: 10px 20px;
-    font-size: 16px;
-    letter-spacing: 1px;
+    box-shadow:  0 0 1em rgba(0, 0, 0, 0.1) ;
+    padding: 10px 20px;    
+    font-size: 15px;
     border-radius: var(--radius);
     cursor: pointer;
+    border: none;
+    text-decoration: none;
+    color: #000000;
 }
+a:link, a:visited {
+	color: #000000;
+    text-decoration: none;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400
+}
+
 .modal{
     margin-top: 5rem;
     display: flex;
@@ -37,7 +48,7 @@ body{
     height: 100%;
 }
 .leftModal{
-    width: 50%;
+    width: 40%;
 }
 .leftModal img{
     width: 100%;

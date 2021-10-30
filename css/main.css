@@ -107,22 +107,22 @@ input::placeholder {
 /* Espaçamento entre os cards */
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(4, minmax(300px, 1fr));
     gap: 3rem;
-}
+}   
 /* Cartão */
 .card{
     background-color: var(--color-background2);
     border-radius: var(--radius);
     box-shadow: var(--box-shadow);
-    width: 320px;
+    width: 280px;
     
     
 }
 
 .country-img{
-    min-height: 180px;
-    width: 320px;
+    min-height: 160px;
+    width: 280px;
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center;
