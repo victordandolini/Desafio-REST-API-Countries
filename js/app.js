@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", e => {
 const fetchData = async () => {
     try {
         const res = await fetch(`https://restcountries.com/v3.1/all`)
-        console.log(res);
         const data = await res.json()
         console.log(data);
         flagPrint(data)
