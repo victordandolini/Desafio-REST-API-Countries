@@ -56,7 +56,7 @@ const flagPrint = data => {
                         ${ Object.keys(borders).length === 0 && borders.constructor === Object ? '' : `
                         <div>
                         <div class="border-countries-label">
-                                <h4>Border Countries:</h4>
+                                <h4>Fronteiras:</h4>
                                 <div class="border-countries-btns">
                                 ${Object.keys(borders).map(function (key) {
                                     return `<button class='country-btn'  value=${borders[key]}>${borders[key]} </button>`           
