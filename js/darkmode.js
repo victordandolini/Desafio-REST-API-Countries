@@ -6,13 +6,13 @@ btnDarkmode.addEventListener('click', () => {
     
     if(document.body.className === 'darkmode'){
         btnDarkmode.innerHTML = `
-        <i class="far fa-moon"></i> 
-        Dark Mode
-        ` 
-    } else {
-        btnDarkmode.innerHTML = `
         <i class="far fa-sun"></i> 
         Light Mode
         `
+    } else {
+        btnDarkmode.innerHTML = `
+        <i class="far fa-moon"></i> 
+        Dark Mode
+        ` 
     }
 })

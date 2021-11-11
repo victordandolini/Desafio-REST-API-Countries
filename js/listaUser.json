@@ -1,0 +1,18 @@
+[
+    {
+       "name":{
+          "common":"Malaysia",
+          "official":"Malaysia",
+          "nativeName":{
+             "eng":{
+                "official":"Malaysia",
+                "common":"Malaysia"
+             },
+             "msa":{
+                "official":"مليسيا",
+                "common":"مليسيا"
+             }
+          }
+       }
+    }
+]

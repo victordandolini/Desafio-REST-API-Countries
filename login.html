@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Enciclopédia dos Paises</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/custom-select.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho e Botão Dark Mode -->
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <h1>Paises</h1>
+            <button class="btn-darkmode">
+                <i class="far fa-moon"></i>
+                Dark Mode
+            </button>
+        </div>
+    </nav>
+    <div class='box'>
+        <div class='cardbox'>
+          <h2> Entrar </h2>
+          
+          <div id='msgError'></div>
+          
+          <div class='label-float'>
+            <input type='text' id='usuario' paceholder='' required>
+            <label id='userLabel' for='usuario'>Usuario</label>
+          </div>
+          
+          <div class='label-float'>
+            <input type='password' id='senha' paceholder='' required>
+            <label id='senhaLabel' for='senha'>Senha</label>
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </div>
+          <br>          
+          <div class='justify-center'>
+            <button class="btn" onclick='entrar()'>Entrar</button>
+          </div>
+          
+          <div class='justify-center'>
+            <br>
+          </div>
+          
+          <p> Não tem uma conta?
+            <a class="btn-darkmode" href='https://cdpn.io/thicode/debug/NWdGRgK/bZrQWKdyRyQk'> Cadastre-se </a>
+          </p>
+          
+        </div>
+        </div>
+        <script type="text/javascript" src="js/darkmode.js"></script>
+        <script src="js/login.js"></script>
+</body>
+
+</html>
