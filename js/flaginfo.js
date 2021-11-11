@@ -42,8 +42,8 @@ const flagPrint = data => {
         const borders = Object.assign({}, threeBorders);
         
         element += `
-            <div class="leftModal">
-            <img src="${item.flags.svg}" alt="" srcset="">                
+            <div id="Flagim" class="leftModal" style="width: 500px">
+            <img class="flag" src="${item.flags.svg}" alt="" srcset="">                
             </div>
             <div class="rightModal" id="rightModal">
             <h1>${item.translations.por.common}</h1>

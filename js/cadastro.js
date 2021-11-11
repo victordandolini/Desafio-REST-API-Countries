@@ -21,7 +21,6 @@ let validConfirmSenha = false
 let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
 
-
 nome.addEventListener('keyup', () => {
   if(nome.value.length <= 2){
     labelNome.setAttribute('style', 'color: red')
@@ -80,13 +79,9 @@ confirmSenha.addEventListener('keyup', () => {
 
 function cadastrar(){
   if(validNome && validUsuario && validSenha && validConfirmSenha){
-    let userData = ['']
-    let res =  fetch('listaUser.json')
-    let data = 
-    console.log(res)
+    let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
     
-    
-    userData.push(
+    listaUser.push(
     {
       nomeCad: nome.value,
       userCad: usuario.value,
@@ -94,10 +89,8 @@ function cadastrar(){
     }
     )
     
-    // localStorage.setItem('listaUser', JSON.stringify(listaUser))
+    localStorage.setItem('listaUser', JSON.stringify(listaUser))
     
-    
-
    
     msgSuccess.setAttribute('style', 'display: block')
     msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'
@@ -105,7 +98,7 @@ function cadastrar(){
     msgError.innerHTML = ''
     
     setTimeout(()=>{
-        // window.location.href = ''
+        window.location.href = '/Desafio-REST-API-Countries/login.html'
     }, 3000)
   
     
