@@ -98,7 +98,7 @@ function cadastrar(){
     msgError.innerHTML = ''
     
     setTimeout(()=>{
-        window.location.href = '/Desafio-REST-API-Countries/login.html'
+        window.location.href = '/Desafio-REST-API-Countries/index.html'
     }, 3000)
   
     
