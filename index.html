@@ -2,7 +2,7 @@
 <html lang="pt-Br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">   
     <title>Enciclopédia dos Paises</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
@@ -24,39 +24,34 @@
             </button>
         </div>
     </nav>
-    <div class='box'>
-        <div class='cardbox'>
-          <h2> Entrar </h2>
-          
-          <div id='msgError'></div>
-          
-          <div class='label-float'>
-            <input type='text' id='usuario' paceholder='' required>
-            <label id='userLabel' for='usuario'>Usuario</label>
-          </div>
-          
-          <div class='label-float'>
-            <input type='password' id='senha' paceholder='' required>
-            <label id='senhaLabel' for='senha'>Senha</label>
-            <i class="fa fa-eye" aria-hidden="true"></i>
-          </div>
-          <br>          
-          <div class='justify-center'>
-            <button class="btn" onclick='entrar()'>Entrar</button>
-          </div>
-          
-          <div class='justify-center'>
-            <br>
-          </div>
-          
-          <p> Não tem uma conta?
-            <a class="btn-darkmode" href='/Desafio-REST-API-Countries/cadastro.html'> Cadastre-se </a>
-          </p>
-          
+    
+    <!-- Filtros de Buscas -->
+    <header class="container filter-content margin" >
+        <form class="search " id="formulary">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Buscar País" id="input-fomulary" >
+        </form>
+        <div class="custom-select" style="width:220px">
+            <select class="select">
+                <option value="">Filtrar por Continentes</option>
+                <option value="">Todos</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europa</option>
+                <option value="Oceania">Oceania</option>
+            </select>
         </div>
-        </div>
-        <script type="text/javascript" src="js/darkmode.js"></script>
-        <script src="js/login.js"></script>
+    </header>
+
+    <main class="container grid" id="flag">
+    </main>
+
+    <script type="text/javascript" src="js/darkmode.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/custom-select.js"></script>
+    <script type="text/javascript" src="js/formulary.js"></script>
+
 </body>
 
 </html>
