@@ -1,10 +1,10 @@
 const flags = document.getElementById('flag')
 
-
+// carregamento da pagina apos consumo da api
 document.addEventListener("DOMContentLoaded", e => {
     fetchData()
 })
-
+// Busca a API e transfoma em json atraves do async/await
 const fetchData = async () => {
     try {
         const res = await fetch(`https://restcountries.com/v3.1/all`)
@@ -18,7 +18,7 @@ const fetchData = async () => {
         console.log(error);
     }
 }
-
+// Mostra os itens filtrados (ou nao) na tela 
 const flagPrint = data => {
         let element = ''
         data.forEach(item => {
