@@ -21,7 +21,6 @@ body.darkmode{
     --color-background: #212E37;
     --color-background2: #2b3743 ;
     --color-text: #ffffff;
-
 }
 
 .container{
@@ -29,6 +28,7 @@ body.darkmode{
     margin-right: auto;
     width: 95%;
 }
+
 
 /* Margens */
 .margin{
@@ -40,6 +40,7 @@ body.darkmode{
 .navbar{
     background-color: var(--color-background2);
     box-shadow: var(--box-shadow);
+    width: 100%;
 }
 
 .navbar-content{
@@ -108,9 +109,7 @@ input::placeholder {
     background-color: var(--color-background2);
     border-radius: var(--radius);
     box-shadow: var(--box-shadow);
-    width: 280px;
-    
-    
+    width: 280px;    
 }
 
 .country-img{
@@ -127,7 +126,8 @@ input::placeholder {
 
 .card-content{
     margin-bottom: 2rem;
-    margin-left: 1rem;   
+    margin-left: 1rem;
+       
 }
 .border-countries{
     display: flex;
@@ -169,6 +169,10 @@ input::placeholder {
     width: 370px;
     
   }
+  #return:hover{
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    
+}
   
   h2{
     text-align: center;
@@ -224,6 +228,7 @@ input::placeholder {
     display: flex;
     justify-content: center;
   }
+
   
   hr{
     margin-top: 10%;
@@ -234,7 +239,6 @@ input::placeholder {
   p{
     color: var(--color-text);
     font-size: 14p;
-    text-align: center;
   }
   
   a{
@@ -351,8 +355,13 @@ a:hover{
         flex-direction: column;
     }
     .btn-darkmode{
-        position: relative;
         bottom: 10px;
+    }
+    .card{
+        width: 95%;
+    }
+    .country-img{
+        width: 100%;
     }
   
 }

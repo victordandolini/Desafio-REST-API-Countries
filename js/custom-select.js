@@ -41,10 +41,15 @@ for (i = 0; i < l; i++) {
             }
             this.setAttribute("class", "same-as-selected");
         
+        // O value selecionado é atribuido a variavel query
             console.log(s.options[i].value);
             const query = s.options[i].value;
+        //  Se esse valor estiver vazio ele mostra todos os paises 
             if (query === ''){
               flagPrint(data)
+        /* Se ele tiver um valor ele será filtrado e atribuido a outra variavel
+        que sera utilizada como parametro para imprimir 
+        apenas os paises do continente selecionado  */
             } else {
               const arrayFilter = data.filter(item => item.region === query)
               flagPrint(arrayFilter)
