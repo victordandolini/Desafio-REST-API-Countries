@@ -22,13 +22,15 @@ const fetchData = async () => {
 const flagPrint = data => {
     let element = ''
         
-    data.forEach(item => {
+    data.map(item => {
         const currencies = item.currencies;
         let currencyArr = []
         for( const key in currencies){
               currencyArr.push(currencies[key].name)
         }
-                    
+        console.log(currencies)
+        
+        
         const languages = item.languages;
         let languagesArr = []
         for( const key in languages){
